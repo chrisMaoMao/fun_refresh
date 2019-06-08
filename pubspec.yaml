@@ -1,11 +1,11 @@
-name: fun_refresh
-description: 趣刷
-version: 0.1.0-alpha01
-environment:
+name: fun_refresh # 项目名
+description: 趣刷 # 描述
+version: 0.1.0-alpha01 # 当前版本号: 主.次.修(alphaNo.->betaNo.->rcNo.->stableNo.)
+environment: # 语言环境
   sdk: ">=2.2.0 <3.0.0"
 dependencies: # 拓展插件集合
-  flutter:
-    sdk: flutter
+  flutter:  # 开发工具
+    sdk: flutter 
   flutter_localizations: # 国际化
     sdk: flutter
   # 更多插件 https://pub.dev/
@@ -25,9 +25,8 @@ dev_dependencies: # 调试插件集合
   build_runner: # 代码生成器
   built_value_generator: # 生成字段
   json_serializable: # 简谱序列化标签注解
-flutter:
-  uses-material-design: true
+flutter:  # 资源配置集合
+  uses-material-design: true  # 激活材料设计
   assets:
-    # 图标
-    - asset/svg/
-    - asset/image/
+    - asset/svg/ # 图标
+    - asset/image/ # 图片
