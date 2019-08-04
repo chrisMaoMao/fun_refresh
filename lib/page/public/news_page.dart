@@ -123,7 +123,7 @@ class _NewsListState extends State<NewsList> {
     var request = await httpClient
         .getUrl(Uri.parse('${NEWS}type=$type&key=${newsKey[0]}'));
     var response = await request.close();
-    var result = await response.transform(utf8.decoder).join();
+    var result = await response.transform(utf8.decoder.cast()).join();
     return result;
   }
 
