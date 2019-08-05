@@ -17,7 +17,7 @@ class _ChatPageState extends State<ChatPage> {
         centerTitle: true,
       ),
       body: Column(
-        children: <Widget>[
+        children: [
           Flexible(
             flex: 1,
             child: ListView(
@@ -43,7 +43,7 @@ class _ChatPageState extends State<ChatPage> {
           Spacer(),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: <Widget>[
+            children: [
               Flexible(child: Container(child: TextFormField())),
               RaisedButton(
                 onPressed: () {},

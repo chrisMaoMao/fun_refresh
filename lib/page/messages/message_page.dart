@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:fun_refresh/tools/api.dart';
 
 class MessagePage extends StatefulWidget {
   @override
@@ -19,9 +20,7 @@ class _MessagePageState extends State<MessagePage> {
 
 class MsgItem extends StatelessWidget {
   @override
-  build(context) => Container();
-}
-/*  Container(
+  build(context) => Container(
         margin: EdgeInsets.symmetric(horizontal: 12.0, vertical: 6.0),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -56,4 +55,5 @@ class MsgItem extends StatelessWidget {
             ),
           ],
         ),
-      ); */
+      );
+}

@@ -15,7 +15,6 @@ export 'extension/tetris_page.dart';
 export 'extension/vision_page.dart';
 export 'extension/weather_page.dart';
 export 'routes/detail_page.dart';
-export 'routes/reward_page.dart';
 export 'routes/mind_page.dart';
 export 'routes/reward_page.dart';
 export 'routes/route_generator.dart';
