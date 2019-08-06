@@ -1,8 +1,9 @@
 import 'package:firebase_admob/firebase_admob.dart';
 import 'package:flutter/material.dart';
 
-// VideoPage
-const String testID = '9FD7ABF35B304FC680D9F9AEE92C45AF';
+const String bannerUnit = 'ca-app-pub-9275143816186195/7092152699';
+const String intersUnit = 'ca-app-pub-9275143816186195/1089851125';
+const String rewardUnit = 'ca-app-pub-9275143816186195/3111888542';
 
 class VideoPage extends StatefulWidget {
   @override
@@ -10,22 +11,14 @@ class VideoPage extends StatefulWidget {
 }
 
 class _VideoPageState extends State<VideoPage> {
-  static const MobileAdTargetingInfo targetingInfo = MobileAdTargetingInfo(
-    testDevices: testID != null ? <String>[testID] : null,
-    keywords: <String>['foo', 'bar'],
-    contentUrl: 'http://foo.com/bar.html',
-    childDirected: true,
-    nonPersonalizedAds: true,
-  );
   BannerAd _bannerAd;
   InterstitialAd _interstitialAd;
   int _coins = 0;
 
   BannerAd createBannerAd() {
     return BannerAd(
-      adUnitId: BannerAd.testAdUnitId,
+      adUnitId: bannerUnit,
       size: AdSize.banner,
-      targetingInfo: targetingInfo,
       listener: (MobileAdEvent event) {
         print("BannerAd event $event");
       },
@@ -34,8 +27,7 @@ class _VideoPageState extends State<VideoPage> {
 
   InterstitialAd createInterstitialAd() {
     return InterstitialAd(
-      adUnitId: InterstitialAd.testAdUnitId,
-      targetingInfo: targetingInfo,
+      adUnitId: intersUnit,
       listener: (MobileAdEvent event) {
         print("InterstitialAd event $event");
       },
@@ -45,7 +37,7 @@ class _VideoPageState extends State<VideoPage> {
   @override
   void initState() {
     super.initState();
-    FirebaseAdMob.instance.initialize(appId: FirebaseAdMob.testAppId);
+    FirebaseAdMob.instance.initialize(appId: "ca-app-pub-9275143816186195~6439219109");
     _bannerAd = createBannerAd()..load();
     RewardedVideoAd.instance.listener =
         (RewardedVideoAdEvent event, {String rewardType, int rewardAmount}) {
@@ -79,6 +71,7 @@ class _VideoPageState extends State<VideoPage> {
                 RaisedButton(
                     child: const Text('SHOW BANNER'),
                     onPressed: () {
+                      print('横幅广告：' + BannerAd.testAdUnitId.toString());
                       _bannerAd ??= createBannerAd();
                       _bannerAd
                         ..load()
@@ -100,15 +93,15 @@ class _VideoPageState extends State<VideoPage> {
                 RaisedButton(
                   child: const Text('SHOW INTERSTITIAL'),
                   onPressed: () {
+                    print('插屏广告' + InterstitialAd.testAdUnitId.toString());
                     _interstitialAd?.show();
                   },
                 ),
                 RaisedButton(
                   child: const Text('LOAD REWARDED VIDEO'),
                   onPressed: () {
-                    RewardedVideoAd.instance.load(
-                        adUnitId: RewardedVideoAd.testAdUnitId,
-                        targetingInfo: targetingInfo);
+                    print('激励视频' + RewardedVideoAd.testAdUnitId.toString());
+                    RewardedVideoAd.instance.load(adUnitId: rewardUnit);
                   },
                 ),
                 RaisedButton(
