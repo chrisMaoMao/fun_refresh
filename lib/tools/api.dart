@@ -6,3 +6,11 @@ const GIRL =
 const MAIN = 'http://192.168.124.34/server';
 // 开眼视频 Eyepetizer
 const EYE_HOME = 'https://baobab.kaiyanapp.com/api/v4/tabs/selected';
+
+// key
+const bannerUnit = 'ca-app-pub-9275143816186195/7092152699';
+const intersUnit = 'ca-app-pub-9275143816186195/1089851125';
+const rewardUnit = 'ca-app-pub-9275143816186195/3111888542';
+const bannerTest = 'ca-app-pub-3940256099942544/6300978111';
+const intersTest = 'ca-app-pub-3940256099942544/6300978111';
+const rewardTest = 'ca-app-pub-3940256099942544/5224354917';
