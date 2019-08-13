@@ -8,7 +8,7 @@ class SettingPage extends StatefulWidget {
 
 class _SettingPageState extends State<SettingPage> {
   @override
-  build(context) {
+  Widget build(BuildContext context) {
     return Center(
       child: Text('设置'),
     );

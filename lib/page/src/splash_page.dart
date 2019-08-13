@@ -41,7 +41,7 @@ class _SplashPageState extends State<SplashPage> {
   }
 
   @override
-  build(context) => Stack(
+  Widget build(BuildContext context) => Stack(
         alignment: Alignment(1.0, -1.0), // 右上角对齐
         children: [
           ConstrainedBox(

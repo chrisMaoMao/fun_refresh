@@ -43,7 +43,7 @@ class _AnchorBarState extends State<AnchorBar> {
   }
 
   @override
-  build(context) {
+  Widget build(BuildContext context) {
     List<Widget> items = List.generate(
         widget.items.length,
         (index) => _buildTabItems(

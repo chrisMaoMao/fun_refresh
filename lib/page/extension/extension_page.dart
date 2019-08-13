@@ -17,7 +17,7 @@ class _ExtensionPageState extends State<ExtensionPage> {
   }
 
   @override
-  build(context) {
+  Widget build(BuildContext context) {
     // double width = MediaQuery.of(context).size.width;
     double height = MediaQuery.of(context).size.height;
     return Scaffold(

@@ -22,7 +22,7 @@ class _FunRefreshAppState extends State<FunRefreshApp> {
   }
 
   @override
-  build(context) {
+  Widget build(BuildContext context) {
     imageCache.clear();
     return MaterialApp(
       debugShowCheckedModeBanner: false,

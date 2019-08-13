@@ -44,7 +44,7 @@ class VideoItemState extends State<VideoItem> {
   }
 
   @override
-  build(context) => AspectRatio(
+  Widget build(BuildContext context) => AspectRatio(
       aspectRatio: 16 / 9,
       child: _controller.value.initialized
           ? _videoPlayer()

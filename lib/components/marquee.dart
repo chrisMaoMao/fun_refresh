@@ -81,7 +81,7 @@ class _MarqueeState extends State<Marquee> with SingleTickerProviderStateMixin {
   }
 
   @override
-  build(context) {
+  Widget build(BuildContext context) {
     assert(!(textList.isNotEmpty && textSpanList.isNotEmpty),
         'textList和textspanList不能同时具有元素');
     if ((textList == null || textList.isEmpty) &&

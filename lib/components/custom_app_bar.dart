@@ -20,7 +20,7 @@ class GradientAppBar extends StatelessWidget implements PreferredSizeWidget {
   final List<Widget> actions;
   final bool showBTN;
   @override
-  build(context) => Container(
+  Widget build(BuildContext context) => Container(
         padding: EdgeInsets.only(bottom: dy),
         decoration: BoxDecoration(
           gradient: LinearGradient(colors: [
@@ -65,7 +65,7 @@ class GradientAppBar extends StatelessWidget implements PreferredSizeWidget {
 
 class SearchView extends StatelessWidget {
   @override
-  build(context) => Card(
+  Widget build(BuildContext context) => Card(
         elevation: 0.0,
         clipBehavior: Clip.antiAlias,
         shape:

@@ -8,14 +8,14 @@ class DetailPage extends StatefulWidget {
   DetailPage({this.args});
   final Map args;
   @override
-  createState() => _DetailPageState();
+  _DetailPageState createState() => _DetailPageState();
 }
 
 class _DetailPageState extends State<DetailPage> {
   _onSelected(Choice choice) => setState(() => choices[0] = choice);
 
   @override
-  build(context) => Scaffold(
+  Widget build(BuildContext context) => Scaffold(
         appBar: GradientAppBar(
           context: context,
           title: widget.args['title'],

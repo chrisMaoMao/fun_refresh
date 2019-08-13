@@ -8,5 +8,5 @@ class GirlPage extends StatefulWidget {
 
 class _GirlPageState extends State<GirlPage> {
   @override
-  build(context) => Center(child: Text('美女'));
+  Widget build(BuildContext context) => Center(child: Text('美女'));
 }

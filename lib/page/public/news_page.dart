@@ -31,7 +31,7 @@ class _NewsPageState extends State<NewsPage>
   }
 
   @override
-  build(context) => Scaffold(
+  Widget build(BuildContext context) => Scaffold(
         appBar: GradientAppBar(
           context: context,
           dy: 3.0,
@@ -121,7 +121,7 @@ class _NewsListState extends State<NewsList> {
   Future<String> requestNews(String type) async {
     var httpClient = HttpClient();
     var request = await httpClient
-        .getUrl(Uri.parse('${NEWS}type=$type&key=${newsKey[0]}'));
+        .getUrl(Uri.parse('${NEWS}type=$type&key=${newsKey[1]}'));
     var response = await request.close();
     var result = await response.transform(utf8.decoder.cast()).join();
     return result;
@@ -134,7 +134,7 @@ class _NewsListState extends State<NewsList> {
   }
 
   @override
-  build(context) {
+  Widget build(BuildContext context) {
     width = MediaQuery.of(context).size.width;
     height = MediaQuery.of(context).size.height;
     orientation = MediaQuery.of(context).orientation;

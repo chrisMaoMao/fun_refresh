@@ -26,7 +26,7 @@ class _HomePageState extends State<HomePage> {
         '${I18n.of(context).msg}',
       ];
   @override
-  build(context) => Scaffold(
+  Widget build(BuildContext context) => Scaffold(
         key: scaffoldKey,
         backgroundColor: Colors.white,
         drawer: CollaplseDrawer(),

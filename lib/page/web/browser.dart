@@ -11,7 +11,7 @@ class Browser extends StatefulWidget {
 
 class _BrowserState extends State<Browser> {
   @override
-  build(context) {
+  Widget build(BuildContext context) {
     return Scaffold(
       appBar: GradientAppBar(
         title: widget.args['title'],

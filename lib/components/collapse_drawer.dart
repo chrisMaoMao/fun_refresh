@@ -51,7 +51,7 @@ class _CollaplseDrawerState extends State<CollaplseDrawer>
   }
 
   @override
-  build(context) => AnimatedBuilder(
+  Widget build(BuildContext context) => AnimatedBuilder(
         animation: _animationController,
         builder: (context, child) => _buildDrawerContent(context, child),
       );
@@ -140,7 +140,7 @@ class _CustomDrawerHeaderState extends State<CustomDrawerHeader> {
   }
 
   @override
-  build(context) => InkWell(
+  Widget build(BuildContext context) => InkWell(
         onTap: () => pushNamed(context, '/detail', args: {'title': '个人信息'}),
         borderRadius: BorderRadius.circular(32.0),
         child: Container(
@@ -242,7 +242,7 @@ class _DrawerItemState extends State<DrawerItem> {
   }
 
   @override
-  build(context) => InkWell(
+  Widget build(BuildContext context) => InkWell(
         onTap: widget.onTap,
         child: Container(
           margin: EdgeInsets.all(8.0),

@@ -49,7 +49,7 @@ class _FadeAnimationState extends State<FadeAnimation>
   }
 
   @override
-  build(context) => animationController.isAnimating
+  Widget build(BuildContext context) => animationController.isAnimating
       ? Opacity(
           opacity: 1.0 - animationController.value,
           child: widget.child,
