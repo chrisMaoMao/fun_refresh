@@ -8,7 +8,7 @@ class SearchPanel extends StatefulWidget {
 
 class _SearchPanelState extends State<SearchPanel> {
   @override
-  build(context) {
+  Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
         child: Text('搜索面板'),

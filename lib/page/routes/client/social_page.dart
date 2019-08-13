@@ -47,7 +47,7 @@ class ItemList extends StatelessWidget {
   }
 
   @override
-  build(context) => ListView.builder(
+  Widget build(BuildContext context) => ListView.builder(
         itemCount: list.length ?? 0,
         itemBuilder: (context, i) {
           _confirm() {

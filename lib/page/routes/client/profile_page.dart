@@ -27,7 +27,7 @@ class _ProfilePageState extends State<ProfilePage> {
   }
 
   @override
-  build(context) => ListView(
+  Widget build(BuildContext context) => ListView(
         children: [
           TextFormField(
             controller: _nickNameC,

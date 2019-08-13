@@ -7,7 +7,7 @@ class AddFriendPage extends StatefulWidget {
 
 class _AddFriendPageState extends State<AddFriendPage> {
   @override
-  build(context) => ListView(
+  Widget build(BuildContext context) => ListView(
         physics: BouncingScrollPhysics(),
         children: [
         

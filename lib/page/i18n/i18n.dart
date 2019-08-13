@@ -44,6 +44,6 @@ class _I18nContainerState extends State<I18nContainer> {
   var _locale = Locale('zh', 'CH');
   toggleLanguage(Locale locale) => setState(() => _locale = locale);
   @override
-  build(context) => Localizations.override(
+  Widget build(BuildContext context) => Localizations.override(
       context: context, locale: _locale, child: widget.child);
 }

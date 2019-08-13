@@ -9,7 +9,7 @@ class MessagePage extends StatefulWidget {
 
 class _MessagePageState extends State<MessagePage> {
   @override
-  build(context) => ListView.separated(
+  Widget build(BuildContext context) => ListView.separated(
         physics: BouncingScrollPhysics(),
         itemCount: 20,
         itemBuilder: (context, index) => MsgItem(),
@@ -20,7 +20,7 @@ class _MessagePageState extends State<MessagePage> {
 
 class MsgItem extends StatelessWidget {
   @override
-  build(context) => Container(
+  Widget build(BuildContext context) => Container(
         margin: EdgeInsets.symmetric(horizontal: 12.0, vertical: 6.0),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
