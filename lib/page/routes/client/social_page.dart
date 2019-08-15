@@ -13,7 +13,7 @@ class SocialPage extends StatefulWidget {
 
 class _SocialPageState extends State<SocialPage> {
   Future<List> getData() async {
-    final response = await Dio().get('$MAIN/database/read');
+    final response = await Dio().get('$LOCAL_SERVER/database/read');
     return jsonDecode(response.data); // php传来的json需要解码一下,否则异步获取的数据是null
   }
 
@@ -39,11 +39,11 @@ class ItemList extends StatelessWidget {
   final List list;
   ItemList({this.list});
   _updateData() async {
-    await Dio().get('$MAIN/database/update');
+    await Dio().get('$LOCAL_SERVER/database/update');
   }
 
   deleteData(i) async {
-    await Dio().post('$MAIN/database/delete', queryParameters: {'id': list[i]['id']});
+    await Dio().post('$LOCAL_SERVER/database/delete', queryParameters: {'id': list[i]['id']});
   }
 
   @override

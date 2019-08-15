@@ -39,7 +39,7 @@ class MsgItem extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
-                    Text('昵称', style: TextStyle(fontSize: 20.0)),
+                    Text('昵称111', style: TextStyle(fontSize: 20.0)),
                     SizedBox(height: 12.0),
                     Text('消息', style: TextStyle(color: Colors.black45)),
                   ],

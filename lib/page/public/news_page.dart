@@ -189,7 +189,7 @@ class _NewsListState extends State<NewsList> {
   }
 
   _buildCardItem(List values, int index) => Card(
-      elevation: 0.5,
+      elevation: 2,
       clipBehavior: Clip.antiAlias,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8.0)),
       child: _buildItem(values[index], index: index));

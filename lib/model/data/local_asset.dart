@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:fun_refresh/tools/api.dart';
 import 'package:fun_refresh/tools/pic_tool.dart';
 
 import '../smash_model.dart';
@@ -21,14 +20,8 @@ get coverTitles => [
       '美女',
     ];
 get covers => [
-      '$BMOB/c64a36dd409fdc1c8067a31fb7b32ab5.jpg',
-      '$BMOB/c9966c294080da348060b83382650daa.jpg',
-      '$BMOB/70baf2cc4015ed4480400d1ae7cf7d87.jpg',
-      '$BMOB/4a33709440cb6d208070e52e0acb2a4a.jpg',
-      '$BMOB/6da8ef2540ca5b2e80d2f96053aa2eb3.png',
-      '$BMOB/b4d755a1402c80b4808b8f3244d9cd0d.jpg',
-      '$BMOB/e9b309bb40778e58808c55eebad821eb.jpg',
-      '$BMOB/b9a7afaf406b422c80c36c1e08b6aa04.jpg',
+      '',
+      '',
     ];
 
 get newsKey => [

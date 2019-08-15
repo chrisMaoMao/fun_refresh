@@ -6,14 +6,15 @@ import 'package:video_player/video_player.dart';
 import 'fade_animation.dart';
 
 class VideoItem extends StatefulWidget {
+  final image;
   final video;
-  VideoItem({@required this.video});
+  VideoItem({this.image, this.video});
   @override
   createState() => VideoItemState();
 }
 
 class VideoItemState extends State<VideoItem> {
-  var _controller;
+  VideoPlayerController _controller;
   bool _isPlaying = false;
   var _videoStatusAnimation;
 
@@ -29,10 +30,9 @@ class VideoItemState extends State<VideoItem> {
         }
       })
       ..initialize().then((_) {
-        Timer(Duration(milliseconds: 1500), () {
+        Timer(Duration(milliseconds: 555), () {
           if (!mounted) return;
           setState(() {});
-          // _controller.play();
         });
       });
   }
@@ -44,23 +44,12 @@ class VideoItemState extends State<VideoItem> {
   }
 
   @override
-  Widget build(BuildContext context) => AspectRatio(
-      aspectRatio: 16 / 9,
-      child: _controller.value.initialized
-          ? _videoPlayer()
-          : Stack(
-              alignment: Alignment.center,
-              children: [
-                GestureDetector(
-                  onTap: () => _controller.play(),
-                  child: Icon(
-                    Icons.play_circle_outline,
-                    color: Colors.white54,
-                    size: 50.0,
-                  ),
-                )
-              ],
-            ));
+  build(context) => AspectRatio(
+        aspectRatio: 16 / 9,
+        child: _controller.value.initialized
+            ? _videoPlayer()
+            : Image.network(widget.image, fit: BoxFit.cover),
+      );
 
   _videoPlayer() => Stack(
         children: [

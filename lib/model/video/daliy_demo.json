@@ -1,0 +1,23 @@
+{
+    "itemList": [
+        {
+            "type": "",
+            "data": {
+                "text": "",
+                "content": {
+                    "data": {
+                        "title": "",
+                        "author": {
+                            "icon": "",
+                            "name": ""
+                        },
+                        "cover": {
+                            "detail": ""
+                        },
+                        "playUrl": ""
+                    }
+                }
+            }
+        }
+    ]
+}

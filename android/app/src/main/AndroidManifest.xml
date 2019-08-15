@@ -9,11 +9,13 @@
          FlutterApplication and put your custom class here. -->
     <application
         android:name="io.flutter.app.FlutterApplication"
-        tools:replace="android:label"
         android:allowBackup="true"
         android:fullBackupContent="false"
         android:icon="@mipmap/ic_launcher"
-        android:label="趣刷">
+        android:label="趣刷"
+        android:networkSecurityConfig="@xml/network_security_config"
+        tools:ignore="UnusedAttribute"
+        tools:replace="android:label">
         <!-- main ca-app-pub-9275143816186195~6439219109 -->
         <!-- test ca-app-pub-3940256099942544~3347511713 -->
         <meta-data

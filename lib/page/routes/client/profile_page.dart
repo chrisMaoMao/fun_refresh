@@ -18,7 +18,7 @@ class _ProfilePageState extends State<ProfilePage> {
   TextEditingController _genderC = TextEditingController();
   _addData() async {
     http.post(
-      '$MAIN/database/create',
+      '$LOCAL_SERVER/database/create',
       body: {
         'phone': _phoneC.text,
         'email': _emailC.text,

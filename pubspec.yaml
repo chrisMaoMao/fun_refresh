@@ -18,7 +18,7 @@ dependencies: # 拓展插件集合
   json_annotation:  # 简谱注解标签
   flutter_staggered_grid_view: # 自适应网格
   firebase_admob: # 谷歌广告
-  dim: # 腾讯云聊天 1400154631
+  # dim: # 腾讯云聊天 1400154631
 dev_dependencies: # 调试插件集合
   flutter_test: # 自动化测试
     sdk: flutter

@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 
 class FadeAnimation extends StatefulWidget {
   const FadeAnimation(
-      {this.child, this.duration = const Duration(milliseconds: 666)});
+      {this.child, this.duration = const Duration(milliseconds: 1000)});
 
-  final child;
-  final duration;
+  final Widget child;
+  final Duration duration;
 
   @override
   _FadeAnimationState createState() => _FadeAnimationState();
@@ -16,7 +16,7 @@ class _FadeAnimationState extends State<FadeAnimation>
   AnimationController animationController;
 
   @override
-  initState() {
+  void initState() {
     super.initState();
     animationController =
         AnimationController(duration: widget.duration, vsync: this);
@@ -29,13 +29,13 @@ class _FadeAnimationState extends State<FadeAnimation>
   }
 
   @override
-  deactivate() {
+  void deactivate() {
     animationController.stop();
     super.deactivate();
   }
 
   @override
-  didUpdateWidget(FadeAnimation oldWidget) {
+  void didUpdateWidget(FadeAnimation oldWidget) {
     super.didUpdateWidget(oldWidget);
     if (oldWidget.child != widget.child) {
       animationController.forward(from: 0.0);
@@ -43,7 +43,7 @@ class _FadeAnimationState extends State<FadeAnimation>
   }
 
   @override
-  dispose() {
+  void dispose() {
     animationController.dispose();
     super.dispose();
   }
