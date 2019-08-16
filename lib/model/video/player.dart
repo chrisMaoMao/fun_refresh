@@ -3,8 +3,9 @@ part 'player.g.dart';
 
 @JsonSerializable()
 class PlayerModel {
-  PlayerModel(this.itemList);
+  PlayerModel(this.itemList, this.nextPageUrl);
   final List<Item> itemList;
+  final String nextPageUrl;
   factory PlayerModel.fromJson(Map<String, dynamic> json) =>
       _$PlayerModelFromJson(json);
   Map<String, dynamic> toJson(PlayerModel instance) =>

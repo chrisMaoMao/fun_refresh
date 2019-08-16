@@ -19,6 +19,9 @@ dependencies: # 拓展插件集合
   flutter_staggered_grid_view: # 自适应网格
   firebase_admob: # 谷歌广告
   # dim: # 腾讯云聊天 1400154631
+  google_sign_in:
+  firebase_core: # 火力云核心库
+  firebase_auth: # 火力云登录验证
 dev_dependencies: # 调试插件集合
   flutter_test: # 自动化测试
     sdk: flutter

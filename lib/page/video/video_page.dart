@@ -3,9 +3,14 @@ import 'package:fun_refresh/components/video_item.dart';
 import 'package:fun_refresh/model/video/player.dart';
 import 'package:fun_refresh/tools/net_tool.dart';
 
-class VideoPage extends StatelessWidget {
+class VideoPage extends StatefulWidget {
   @override
-  Widget build(BuildContext context) => Scaffold(
+  createState() => _VideoPageState();
+}
+
+class _VideoPageState extends State<VideoPage> {
+  @override
+  build(context) => Scaffold(
         appBar: AppBar(
           centerTitle: true,
           title: Text('视频', textScaleFactor: 1.3),

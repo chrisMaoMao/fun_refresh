@@ -131,7 +131,7 @@ class _CustomDrawerHeaderState extends State<CustomDrawerHeader> {
   Animation<double> widthAnim, sizedBoxAnim;
 
   @override
-  initState() {
+  void initState() {
     super.initState();
     widthAnim = Tween<double>(begin: 220.0, end: 70.0)
         .animate(widget.animationController);
@@ -141,7 +141,7 @@ class _CustomDrawerHeaderState extends State<CustomDrawerHeader> {
 
   @override
   Widget build(BuildContext context) => InkWell(
-        onTap: () => pushNamed(context, '/detail', args: {'title': '个人信息'}),
+        onTap: () => pushNamed(context, '/sign'),
         borderRadius: BorderRadius.circular(32.0),
         child: Container(
           height: 124.0,
@@ -233,7 +233,7 @@ class _DrawerItemState extends State<DrawerItem> {
   Animation<double> widthAnim, sizedBoxAnim;
 
   @override
-  initState() {
+  void initState() {
     super.initState();
     widthAnim = Tween<double>(begin: 220.0, end: 60.0)
         .animate(widget.animationController);

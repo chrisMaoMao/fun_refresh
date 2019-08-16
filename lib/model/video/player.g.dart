@@ -7,13 +7,19 @@ part of 'player.dart';
 // **************************************************************************
 
 PlayerModel _$PlayerModelFromJson(Map<String, dynamic> json) {
-  return PlayerModel((json['itemList'] as List)
-      ?.map((e) => e == null ? null : Item.fromJson(e as Map<String, dynamic>))
-      ?.toList());
+  return PlayerModel(
+      (json['itemList'] as List)
+          ?.map((e) =>
+              e == null ? null : Item.fromJson(e as Map<String, dynamic>))
+          ?.toList(),
+      json['nextPageUrl'] as String);
 }
 
 Map<String, dynamic> _$PlayerModelToJson(PlayerModel instance) =>
-    <String, dynamic>{'itemList': instance.itemList};
+    <String, dynamic>{
+      'itemList': instance.itemList,
+      'nextPageUrl': instance.nextPageUrl
+    };
 
 Item _$ItemFromJson(Map<String, dynamic> json) {
   return Item(

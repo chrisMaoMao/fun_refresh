@@ -97,6 +97,7 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
     implementation 'com.google.firebase:firebase-core:17.0.1'
     implementation 'com.google.android.gms:play-services-ads:18.1.1'
+    implementation 'com.google.android.gms:play-services-auth:17.0.0'
 
     testImplementation 'junit:junit:4.13-beta-3'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2-alpha02'

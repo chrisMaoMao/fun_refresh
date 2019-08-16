@@ -6,9 +6,9 @@ NeTool get netool => NeTool();
 Dio dio = Dio();
 
 class NeTool {
-  Future<PlayerModel> fetchVideoList() async {
+  Future<PlayerModel> fetchVideoList({String requestUrl = EYE_DAILY}) async {
     final response = await Dio().get(
-      EYE_DAILY,
+      requestUrl,
       queryParameters: {'deviceModel': 'GM1910', 'vc': 531, 'num': 2},
       options: Options(headers: {'User-Agent': POST_MAN}),
     );

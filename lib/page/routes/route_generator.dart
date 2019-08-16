@@ -15,15 +15,17 @@ class RouteGenerator {
       case '/browser':
         return _skipRoute(Browser(args: args));
       case '/sign':
-        return _skipRoute(SignPage(args: args));
+        return _skipRoute(SignPage());
       case '/reward':
         return _skipRoute(RewardPage());
       case '/chat':
         return _skipRoute(ChatPage(args: args));
       case '/profile':
         return _skipRoute(ProfilePage(args: args));
-      case '/profile':
+      case '/search':
         return _skipRoute(SearchPanel());
+      case '/sign':
+        return _skipRoute(SignPage());
       default:
         return errorRoutes();
     }
