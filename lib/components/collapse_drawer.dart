@@ -8,6 +8,7 @@ import 'package:fun_refresh/page/i18n/i18n.dart';
 import 'package:fun_refresh/page/i18n/lang_kv.dart';
 import 'package:fun_refresh/page/routes/route_generator.dart';
 import 'package:fun_refresh/tools/api.dart';
+import 'package:fun_refresh/tools/global.dart';
 import 'package:fun_refresh/tools/pic_tool.dart';
 
 class CollaplseDrawer extends StatefulWidget {
@@ -17,7 +18,7 @@ class CollaplseDrawer extends StatefulWidget {
 
 class _CollaplseDrawerState extends State<CollaplseDrawer>
     with SingleTickerProviderStateMixin {
-  double maxWidth = 230.0;
+  double maxWidth = 256.0;
   double minWidth = 70.0;
   bool isCollapse = false;
   AnimationController _animationController;
@@ -73,12 +74,12 @@ class _CollaplseDrawerState extends State<CollaplseDrawer>
               child: ListView.builder(
                 itemCount: drawerMenuItems.length,
                 itemBuilder: (context, index) => DrawerItem(
-                      onTap: () => setState(() => currentIndex = index),
-                      isSelected: currentIndex == index,
-                      title: drawerMenuItems[index].title,
-                      iconPath: drawerMenuItems[index].iconPath,
-                      animationController: _animationController,
-                    ),
+                  onTap: () => setState(() => currentIndex = index),
+                  isSelected: currentIndex == index,
+                  title: drawerMenuItems[index].title,
+                  iconPath: drawerMenuItems[index].iconPath,
+                  animationController: _animationController,
+                ),
               ),
             ),
             CupertinoButton(
@@ -133,6 +134,7 @@ class _CustomDrawerHeaderState extends State<CustomDrawerHeader> {
   @override
   void initState() {
     super.initState();
+    print('抽屉用户信息：$isGoogleLoginSuccess');
     widthAnim = Tween<double>(begin: 220.0, end: 70.0)
         .animate(widget.animationController);
     sizedBoxAnim =
@@ -162,7 +164,9 @@ class _CustomDrawerHeaderState extends State<CustomDrawerHeader> {
                           color: Colors.transparent,
                           elevation: 0.0,
                           child: Image.network(
-                            '$GIRL',
+                            isGoogleLoginSuccess == false
+                                ? GIRL
+                                : googleUser.photoUrl,
                             width: 52.0,
                             height: 52.0,
                             fit: BoxFit.cover,
@@ -173,17 +177,17 @@ class _CustomDrawerHeaderState extends State<CustomDrawerHeader> {
                             ? Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  Text(I18n.of(context).userName,
+                                  Text(
+                                      isGoogleLoginSuccess == false
+                                          ? I18n.of(context).userName
+                                          : googleUser.displayName,
                                       style: whiteTxT),
-                                  Text('xxx@gmail.com', style: whiteTxT),
+                                  Text(
+                                      isGoogleLoginSuccess == false
+                                          ? 'xxxx@gmail.com'
+                                          : googleUser.email,
+                                      style: whiteTxT),
                                 ],
-                              )
-                            : Container(),
-                        widthAnim.value >= 220.0
-                            ? IconButton(
-                                icon: Icon(Icons.more_vert,
-                                    color: Colors.white, size: 28.0),
-                                onPressed: () {},
                               )
                             : Container(),
                       ],

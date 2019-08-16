@@ -121,7 +121,7 @@ class _NewsListState extends State<NewsList> {
   Future<String> requestNews(String type) async {
     var httpClient = HttpClient();
     var request = await httpClient
-        .getUrl(Uri.parse('${NEWS}type=$type&key=${newsKey[1]}'));
+        .getUrl(Uri.parse('${NEWS}type=$type&key=${newsKey[2]}'));
     var response = await request.close();
     var result = await response.transform(utf8.decoder.cast()).join();
     return result;

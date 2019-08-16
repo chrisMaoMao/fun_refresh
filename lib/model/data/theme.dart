@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:fun_refresh/tools/common.dart';
+import 'package:fun_refresh/tools/global.dart';
 
 // 文字样式
 $Text(String text) =>

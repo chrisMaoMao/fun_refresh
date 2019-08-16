@@ -8,7 +8,7 @@ import 'package:fun_refresh/components/marquee.dart';
 import 'package:fun_refresh/model/data/local_asset.dart';
 import 'package:fun_refresh/model/smash_model.dart';
 import 'package:fun_refresh/page/i18n/i18n.dart';
-import 'package:fun_refresh/tools/common.dart';
+import 'package:fun_refresh/tools/global.dart';
 import '../export_page_pkg.dart';
 
 class HomePage extends StatefulWidget {
