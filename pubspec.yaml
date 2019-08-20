@@ -1,6 +1,6 @@
 name: fun_refresh # 项目名
 description: 趣刷 # 描述
-version: 0.1.0-alpha02 # 当前版本号: 主.次.修(alphaNo.->betaNo.->rcNo.->stableNo.)
+version: 1.0.1 # 当前版本号: 主.次.修(alphaNo.->betaNo.->rcNo.->stableNo.)
 environment: # 语言环境
   sdk: ">=2.2.0 <3.0.0"
 dependencies: # 拓展插件集合
@@ -19,7 +19,7 @@ dependencies: # 拓展插件集合
   flutter_staggered_grid_view: # 自适应网格
   firebase_admob: # 谷歌广告
   # dim: # 腾讯云聊天 1400154631
-  google_sign_in:
+  google_sign_in: # 谷歌登录
   firebase_core: # 火力云核心库
   firebase_auth: # 火力云登录验证
 dev_dependencies: # 调试插件集合

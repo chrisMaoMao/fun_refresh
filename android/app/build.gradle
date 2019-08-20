@@ -13,12 +13,12 @@ if (flutterRoot == null) {
 
 def flutterVersionCode = localProperties.getProperty('flutter.versionCode')
 if (flutterVersionCode == null) {
-    flutterVersionCode = '1'
+    flutterVersionCode = '2'
 }
 
 def flutterVersionName = localProperties.getProperty('flutter.versionName')
 if (flutterVersionName == null) {
-    flutterVersionName = '1.0'
+    flutterVersionName = '1.0.1'
 }
 
 apply plugin: 'com.android.application'
@@ -31,14 +31,14 @@ if (keystorePropertiesFile.exists()) {
     keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
 }
 android {
-    // splits {  // 生成多架构apk
-    //     abi {
-    //         enable true
-    //         reset()
-    //         include 'armeabi', "armeabi-v7a", "x86_64"
-    //         universalApk false
-    //     }
-    // }
+    splits {  // 生成多架构apk
+        abi {
+            enable true
+            reset()
+            include 'armeabi', "armeabi-v7a", "x86_64"
+            universalApk false
+        }
+    }
     compileSdkVersion 29
 
     sourceSets {
@@ -98,8 +98,8 @@ dependencies {
     implementation 'com.google.firebase:firebase-core:17.0.1'
     implementation 'com.google.android.gms:play-services-ads:18.1.1'
     implementation 'com.google.android.gms:play-services-auth:17.0.0'
-
-    testImplementation 'junit:junit:4.13-beta-3'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.2-alpha02'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0-alpha02'
+    api 'com.google.code.findbugs:jsr305:3.0.2'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 }
